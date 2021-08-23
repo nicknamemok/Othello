@@ -75,20 +75,3 @@ bool Game::start()
     }
 
 }
-
-TestClass::TestClass()
-    : Board{}
-{
-    m_board[3][3] = m_board[4][4] = m_board[3][4] = m_board[4][3] = Piece::empty;
-}
-
-TestClass::test1()
-{
-    m_board[5][0] = m_board[6][0] = m_board[7][0] = Piece::black;
-    m_board[5][1] = m_board[6][1] = m_board[7][1] = Piece::white;
-
-    print();
-    std::cout << "\n";
-    place(7,2,Piece::black);
-    print();
-}

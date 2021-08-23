@@ -22,12 +22,4 @@ public:
 
 };
 
-class TestClass: public Board
-{
 
-public:
-
-    TestClass();
-    test1();
-
-};
