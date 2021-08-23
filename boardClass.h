@@ -15,6 +15,8 @@ protected:
 
     std::vector<std::vector<Piece>> m_board;
     int m_emptyTiles{ (8*8)-4 };
+    int m_blackTiles{2};
+    int m_whiteTiles{2};
 
     const std::vector<char> topBar = {'1','2','3','4','5','6','7','8'};
     const std::vector<char> sideBar = {'A','B','C','D','E','F','G','H'};

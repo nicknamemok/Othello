@@ -34,9 +34,12 @@ bool Board::place(int i, int j, Piece p)
     if( check(i-1,j-1,-1,-1,p,true) ) { value = true; }
     if( check(i-1,j+1,-1,1,p,true) ) { value = true; }
     
+    // Successful placement
     if( value ) {
         m_board[i][j] = p;
         m_emptyTiles--;
+        if (p==Piece::black) { ++m_blackTiles; }
+        else if (p==Piece::white) { ++m_whiteTiles; }
         return 1;
     }else{
         std::cout << "Invalid piece placement. Please try again.\n";

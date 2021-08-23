@@ -16,7 +16,7 @@ public:
 
     Game(const std::string& name1="Player 1", const std::string& name2="Player 2");
 
-    void validateInput(int& letter, int& number);
+    bool validateInput(int& letter, int& number);
     void round();
     bool start();
 
