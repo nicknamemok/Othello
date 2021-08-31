@@ -25,7 +25,7 @@ protected:
 
 public:
 
-    bool check(int i, int j, int del_i, int del_j, Piece p, bool firstPass=0);
+    bool check(int i, int j, int del_i, int del_j, Piece p, bool firstPass);
     bool place(int i, int j, Piece p);
     void print();
 

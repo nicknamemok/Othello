@@ -9,7 +9,7 @@ Board::Board(const bool mod)
         m_board[3][4] = m_board[4][3] = mod ? Piece::white : Piece::black; }
 
 // Recursive check function
-bool Board::check(int i, int j, int del_i, int del_j, Piece p, bool firstPass)
+bool Board::check(int i, int j, int del_i, int del_j, Piece p, bool firstPass=0)
 {
     if ( j > 7 || j < 0 || i > 7 || i < 0 ) { return 0; }
     else if ( m_board[i][j] == Piece::empty ) { return 0; }
@@ -23,6 +23,9 @@ bool Board::check(int i, int j, int del_i, int del_j, Piece p, bool firstPass)
 
 bool Board::place(int i, int j, Piece p)
 {
+
+
+    if( m_board[i][j] != Piece::empty ) { std::cout << "Non-empty tile chosen. Please try again.\n"; return 0; }
 
     bool value{ false };
 
