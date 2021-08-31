@@ -8,6 +8,7 @@ Board::Board(const bool mod)
     { m_board[3][3] = m_board[4][4] = mod ? Piece::black : Piece::white;
         m_board[3][4] = m_board[4][3] = mod ? Piece::white : Piece::black; }
 
+// Recursive check function
 bool Board::check(int i, int j, int del_i, int del_j, Piece p, bool firstPass)
 {
     if ( j > 7 || j < 0 || i > 7 || i < 0 ) { return 0; }
